@@ -1,3 +1,0 @@
-Date: 02-Oct-2026 14:17:38
-GNU Octave 11.3.0
-Computer: aarch64-apple-darwin25.4.0
