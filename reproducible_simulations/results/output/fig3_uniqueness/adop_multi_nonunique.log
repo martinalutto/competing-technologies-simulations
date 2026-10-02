@@ -1,0 +1,6 @@
+[Case B] condition (9) LHS = 2159.0177  (>= 1 expected)
+[Case B] Final adoption fractions (run 1):    0.1388   0.1495   0.1294   0.1946   0.1451
+[Case B] Final adoption fractions (run 2):    0.1257   0.1354   0.1235   0.1851   0.1350
+[Case B] Max adoption equilibrium difference: 1.42e-02
+[Case B] Max opinion equilibrium difference : 1.31e-02
+warning: legend: 'best' not yet implemented for location specifier, using 'northeast' instead

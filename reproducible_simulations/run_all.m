@@ -1,19 +1,14 @@
 function run_all(groups)
 % RUN_ALL  Re-run the experiments and save every figure they open.
-%
-%   run_all                         % all groups listed below
-%   run_all({'01_uniqueness'})      % only selected groups
-%
-% Figures go to results/output/<group>/<script>_figN.png (+ .fig in MATLAB),
-% console output to results/output/<group>/<script>.log, and the software
-% environment to results/output/environment.txt.
-% Each script runs inside its own output folder, so files it saves itself
-% (saveas / exportgraphics) also land there.
+%   run_all                       % all groups
+%   run_all({'fig3_uniqueness'})  % selected groups
+% Figures and logs go to results/output/<group>/, environment info to results/output/.
 
 root = setup_paths();
 
 if nargin < 1
-    groups = {'01_uniqueness', '02_kingmaker', '03_optimal_control', '04_real_data'};
+    groups = {'fig1_market_share', 'fig3_uniqueness', 'fig4_entry', 'fig5-7_optimal_control', ...
+              'extra_kingmaker_analysis', 'extra_problem4_kingmaker_control'};
 end
 
 outRoot = fullfile(root, 'results', 'output');
@@ -75,9 +70,13 @@ close all;
 end
 
 function exec_script(scriptPath, outDir)
-% Separate workspace: a 'clear' inside the script only wipes this function.
+% Own workspace, so a 'clear' in the script is harmless; run() is avoided
+% because it changes into the script's folder.
+[scriptDir, scriptName] = fileparts(scriptPath);
+addpath(scriptDir);
+cleanup = onCleanup(@() rmpath(scriptDir));
 cd(outDir);
-run(scriptPath);
+eval(scriptName);
 end
 
 function write_environment(file)
