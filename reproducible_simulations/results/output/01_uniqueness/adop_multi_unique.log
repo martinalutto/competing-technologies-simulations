@@ -1,0 +1,6 @@
+[Caso A] eq:hyp-unique LHS = 0.6283  (< 1 richiesto)
+[Caso A] Frazioni finali adozione (run 1):    0.081406   0.079193   0.060774   0.072324   0.069145
+[Caso A] Frazioni finali adozione (run 2):    0.081414   0.079202   0.060782   0.072328   0.069152
+[Caso A] Differenza massima equilibrio adozione: 8.49e-06
+[Caso A] Differenza massima equilibrio opinioni : 4.74e-07
+warning: legend: 'best' not yet implemented for location specifier, using 'northeast' instead
