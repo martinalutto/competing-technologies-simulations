@@ -1,4 +1,4 @@
-%% run_control_three_problems_noD.m
+%% run_control_problems.m
 % Optimal control of the adoption-opinion model (Figs. 5-7 of the paper):
 %   Problem 1: cumulative adoption maximization, control on all layers (Figs. 5-6).
 %   Problem 2: terminal adoption of target k0 under budget sum_t u'Qu <= B (Fig. 7).
